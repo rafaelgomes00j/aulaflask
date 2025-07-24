@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basehtml</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <style>
+        header{
+            display: flex;
+            background-color: rgb(125, 125, 219);
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+        }
+        ul li {
+            display: inline;
+            margin-left: 10px;
+        }
+        ul li a{
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+        }
+        .marca span{
+            font-size: 10pt;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="marca">
+            <span>Recrutamento</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{url_for('paginaInicial')}}">Menu</a></li>
+                <li><a href="{{url_for('pagina1')}}">Pagina1</a></li>
+                <li><a href="{{url_for('pagina2')}}">Pagina2</a></li>
+                <li><a href="{{url_for('pagina3')}}">Pagina3</a></li>
+            </ul>
+        </nav>
+    </header>
+    Menu de navegação
+    {% block conteudo %}
+
+    {% endblock %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</body>
+</html>

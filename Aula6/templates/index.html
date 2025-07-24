@@ -1,0 +1,27 @@
+{% extends 'base.html'%}
+{% block conteudo%}
+    {% if logada == True %}
+ 
+
+    <h1>Olá {{userName}}</h1>
+
+    <h1>Dados do Dicionario</h1>
+
+    <p>Nome: {{use.nome}}</p>
+    <p>Idade: {{use.idade}}</p>
+    <p>E-mail: {{use.email}}</p>
+    <p></p>
+    
+    <h2>Linguagens Programaçao</h2>
+
+    <ul>
+        {% for linguagem in linguagensProgramacao%}
+            <li>{{llinguagem}}</li>
+        {% endfor %}
+    </ul>
+    
+    {% else %}
+    <h1>Voce nao estar logado</h1>
+
+    {% endif%}
+{% endblock %}

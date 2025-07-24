@@ -1,0 +1,61 @@
+{% extends 'base.html'%}
+
+{% block conteudo%}
+<style>
+    form div{
+        margin-bottom: 20px;
+    }
+</style>
+
+<h1>CADASTRE-SE Formulario</h1>
+<form action="{{url_for('pagina1')}}" method="post">
+    <div>
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome">
+    </div>
+    <div>
+        <label for="idade">Idade:</label>
+        <input type="number" name="idade" id="idade">
+    </div>
+    <div>
+        <label for="data">Data Nascimento:</label>
+        <input type="date" name="data" id="data">
+    </div>
+    <div>
+        <label for="are">Area de Trabalho:</label>
+        <select name="" id="">
+            <option value="dev">Desenvolvedor</option>
+            <option value="sagurança">Segurança</option>
+            <option value="cyber">Cyber</option>
+        </select>
+    </div>
+
+</form>
+<!-- <br>
+<label for="">Nome:</label><input type="text" name="nome">
+<br>
+<br>
+<label for="">Idade:</label> <input type="number" max="65" name="idade">
+<br>
+<br>
+<label for="">Data de nascimento</label> <input type="date" name="data">
+<br>
+<br>
+<label for="">Area de trabalho</label> 
+    <select name="uber, de" id="">
+        <option value="dev">Dev</option>
+        <option value="educaçao">Educaçao</option>
+        <option value="seguranaca">Segurança</option>
+    </select>
+<br>
+<br>
+<label for="">Pretençao de salario</label> <input type="number">
+<br>
+<br> -->
+    <div>
+        <input style="background-color: blueviolet;" type="submit" value="Enviar">
+    </div>
+
+
+
+{% endblock %}
